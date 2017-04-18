@@ -15,6 +15,9 @@ public class CheckOutPgObjects extends PageObject{
 	WebElement tc;
 	@FindBy(xpath=".//*[@id='checkout-shipping-form']/div/div[6]/a")
 	WebElement chkoutsp;
+	@FindBy(xpath=".//*[@id='checkout-shipping-form']/div/div[4]/a")
+	WebElement chkoutsp2;
+	
 	@FindBy(xpath=".//*[@id='delivery-2210001001']")
 	WebElement deliveryOption;
 	@FindBy(xpath=".//*[@id='delivery-2912001004']")
@@ -44,7 +47,11 @@ public class CheckOutPgObjects extends PageObject{
 		tc.click();
 	}
 	public void clickCheckOutSelectPayment(){
+		try{
 		chkoutsp.click();
+		}catch(org.openqa.selenium.NoSuchElementException ex){
+			chkoutsp2.click();
+		}
 	}
 	public void selectDeliveryOption(String value){
 		Select dilio=new Select(deliveryOption);
