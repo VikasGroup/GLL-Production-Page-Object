@@ -37,9 +37,18 @@ public class CheckOutPgObjects extends PageObject{
 	@FindBy(xpath=".//*[@id='ecard-payment-form']/div[5]/a[2]")
 	WebElement confirm;
 	
+	@FindBy(xpath=".//*[@id='subHeadingFour2']/h4/a/span")
+	WebElement cash;
+	@FindBy(xpath=".//*[@id='subCollapseFour2']/div/a")
+	WebElement confirmCashPayment;
 	
 	
-	
+	public void clickCashPayment(){
+		cash.click();
+	}
+	public void ConfirmCashPayment(){
+		confirmCashPayment.click();
+	}
 	public void clickProceedCheckOut(){
 		chkout.click();
 	}

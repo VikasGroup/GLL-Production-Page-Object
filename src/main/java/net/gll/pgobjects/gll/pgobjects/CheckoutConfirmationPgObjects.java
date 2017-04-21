@@ -8,6 +8,11 @@ import net.serenitybdd.core.pages.PageObject;
 
 
 public class CheckoutConfirmationPgObjects extends PageObject{
+	@FindBy(xpath="html/body/div[2]/div[2]/div/div/div[2]/h2")
+	WebElement getorderdetails;
+	public String GetOrderDetails(){
+		return getorderdetails.getText();
+	}
 	@FindBy(xpath="html/body/div[2]/div[2]/div/div/div[1]/h4")
 	WebElement id; 
 	public String getConfirmation() {
