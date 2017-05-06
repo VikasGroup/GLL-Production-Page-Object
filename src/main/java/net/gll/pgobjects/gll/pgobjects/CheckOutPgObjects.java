@@ -42,7 +42,6 @@ public class CheckOutPgObjects extends PageObject{
 	@FindBy(xpath=".//*[@id='subCollapseFour2']/div/a")
 	WebElement confirmCashPayment;
 	
-	
 	public void clickCashPayment(){
 		cash.click();
 	}
